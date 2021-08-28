@@ -1,10 +1,7 @@
-﻿using CoinJar.Core.Coins;
-using CoinJar.Core.Constants;
+﻿using CoinJar.Core.Constants;
 using CoinJar.Core.Exceptions;
-using CoinJarApi.Managers;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace CoinJarApi.Controllers
 {

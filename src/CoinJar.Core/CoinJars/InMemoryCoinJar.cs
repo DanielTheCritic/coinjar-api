@@ -20,6 +20,15 @@ namespace CoinJar.Core.CoinJars
 
     public void AddCoin(ICoin coin)
     {
+      if(coin.Volume <= 0)
+      {
+        throw new CoinJarException(CoinJarErrorCodes.InvalidCoinVolume, $"Adding coin failed. Expected volume must be greater than 0.");
+      }
+      if (coin.Amount <= 0)
+      {
+        throw new CoinJarException(CoinJarErrorCodes.InvalidCoinAmount, $"Adding coin failed. Expected amount must be greater than 0.");
+      }
+
       var filledVolume = GetFilledVolume();
       if(filledVolume + coin.Volume > _volume)
       {
