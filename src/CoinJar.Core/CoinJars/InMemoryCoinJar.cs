@@ -1,5 +1,6 @@
 ﻿using CoinJar.Core.Coins;
 using CoinJar.Core.Constants;
+using CoinJar.Core.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace CoinJar.Core.CoinJars
       var filledVolume = GetFilledVolume();
       if(filledVolume + coin.Volume > _volume)
       {
-        throw new Exception($"Adding coin failed. Coin jar will exceed max volume.");
+        throw new CoinJarException(CoinJarErrorCodes.VolumeExceeded, $"Adding coin failed. Coin jar would exceed max volume of {_volume} fluid ounces.");
       }
       _coins.Add(coin);
     }

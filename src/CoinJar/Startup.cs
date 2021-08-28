@@ -40,10 +40,9 @@ namespace CoinJarApi
         app.UseDeveloperExceptionPage();
       }
 
+      app.UseExceptionHandler("/error");
       app.UseHttpsRedirection();
-
       app.UseRouting();
-
       app.UseAuthorization();
 
       app.UseEndpoints(endpoints =>
