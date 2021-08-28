@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinJarApi", "CoinJar\CoinJarApi.csproj", "{430C6653-51C0-4F7A-982D-AA488D6172C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinJarApi.Tests", "CoinJarApi.Tests\CoinJarApi.Tests.csproj", "{4AF26BF0-7122-4543-9E9E-3D9CA104ABAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinJar.Core", "CoinJar.Core\CoinJar.Core.csproj", "{838C7B99-3832-4876-82E7-B96C1F7AE9C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{430C6653-51C0-4F7A-982D-AA488D6172C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430C6653-51C0-4F7A-982D-AA488D6172C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430C6653-51C0-4F7A-982D-AA488D6172C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430C6653-51C0-4F7A-982D-AA488D6172C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF26BF0-7122-4543-9E9E-3D9CA104ABAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF26BF0-7122-4543-9E9E-3D9CA104ABAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF26BF0-7122-4543-9E9E-3D9CA104ABAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF26BF0-7122-4543-9E9E-3D9CA104ABAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{838C7B99-3832-4876-82E7-B96C1F7AE9C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{838C7B99-3832-4876-82E7-B96C1F7AE9C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{838C7B99-3832-4876-82E7-B96C1F7AE9C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{838C7B99-3832-4876-82E7-B96C1F7AE9C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23292C55-33F1-4560-AC7A-1682224C4044}
+	EndGlobalSection
+EndGlobal
