@@ -13,10 +13,6 @@ namespace CoinJarApi.Controllers
   {
     private readonly ICoinJarManager _manager;
 
-    /// <summary>
-    /// A constructor that accepts an implementation of ICoinJarManager.
-    /// </summary>
-    /// <param name="coinJarManager">The ICoinJarManager.</param>
     public CoinJarController(ICoinJarManager coinJarManager)
     {
       _manager = coinJarManager;
@@ -27,6 +23,7 @@ namespace CoinJarApi.Controllers
     /// </summary>
     /// <returns>An object with a TotalAmount field.</returns>
     [HttpGet]
+    [Produces("application/json")]
     public CoinJarAmount GetAmount()
     {
       return _manager.GetCoinJarAmount();
@@ -37,9 +34,13 @@ namespace CoinJarApi.Controllers
     /// </summary>
     /// <param name="coin">Accepts a USDCoin, an implementation of ICoin.</param>
     /// <returns></returns>
+    /// <response code="200">An empty response if adding the coin was successful.</response>
+    /// <response code="400">If the coin passed into the request was invalid.</response>  
     [HttpPost]
     [Route("coins")]
-    public IActionResult AddCoin(USDCoin coin)
+    [ProducesResponseType(200)]
+    [ProducesResponseType(400, Type = typeof(ErrorResponse))]
+    public IActionResult AddCoin([FromBody]USDCoin coin)
     {
       _manager.AddCoin(coin);
       return Ok();
@@ -51,6 +52,7 @@ namespace CoinJarApi.Controllers
     /// <returns></returns>
     [HttpDelete]
     [Route("coins")]
+    [ProducesResponseType(200)]
     public IActionResult Reset()
     {
       _manager.Reset();

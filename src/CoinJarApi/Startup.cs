@@ -2,12 +2,12 @@ using CoinJar.Core.CoinJars;
 using CoinJarApi.Managers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-#pragma warning disable 1591
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace CoinJarApi
 {
@@ -33,8 +33,11 @@ namespace CoinJarApi
         {
           Title = "CoinJar API",
           Version = "v1",
-          Description = "Services for managing a coin jar.",
+          Description = "Services for managing a coin jar."
         });
+
+        var xmlPath = Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
+        options.IncludeXmlComments(xmlPath);
       });
     }
 
