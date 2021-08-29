@@ -1,5 +1,6 @@
 ﻿using CoinJar.Core.CoinJars;
 using CoinJar.Core.Constants;
+using CoinJar.Core.DataStores;
 using CoinJar.Core.Exceptions;
 using NUnit.Framework;
 using System;
@@ -7,11 +8,16 @@ using System;
 namespace CoinJar.Tests
 {
   [TestFixture]
-  public class InMemoryCoinJarTests
+  public class DefaultCoinJarTests
   {
-    private InMemoryCoinJar GetCoinJar()
+    private IDataStore GetDataStore()
     {
-      return new InMemoryCoinJar();
+      return new InMemoryDataStore();
+    }
+
+    private DefaultCoinJar GetCoinJar()
+    {
+      return new DefaultCoinJar(GetDataStore());
     }
 
     private MockCoin CreateCoin(decimal amount, decimal volume)

@@ -1,4 +1,5 @@
 using CoinJar.Core.CoinJars;
+using CoinJar.Core.DataStores;
 using CoinJarApi.Managers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,7 +30,8 @@ namespace CoinJarApi
 
       services.AddControllers();
       services.AddScoped<ICoinJarManager, CoinJarManager>();
-      services.AddSingleton<ICoinJar, InMemoryCoinJar>();
+      services.AddSingleton<ICoinJar, DefaultCoinJar>();
+      services.AddSingleton<IDataStore, FileDataStore>(); // This can be swapped out for the InMemoryDataStore.
       services.AddSingleton<ILogger>(logger);
 
       services.AddSwaggerGen(options =>

@@ -1,20 +1,20 @@
 ﻿using CoinJar.Core.Coins;
 using CoinJar.Core.Constants;
+using CoinJar.Core.DataModels;
+using CoinJar.Core.DataStores;
 using CoinJar.Core.Exceptions;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace CoinJar.Core.CoinJars
 {
-  public class InMemoryCoinJar : ICoinJar
+  public class DefaultCoinJar : ICoinJar
   {
     private readonly decimal _volume;
-    private readonly List<ICoin> _coins;
+    private readonly IDataStore _dataStore;
 
-    public InMemoryCoinJar()
+    public DefaultCoinJar(IDataStore dataStore)
     {
-      _coins = new List<ICoin>();
+      _dataStore = dataStore;
       _volume = CoinJarVolumes.DEFAULT;
     }
 
@@ -29,27 +29,28 @@ namespace CoinJar.Core.CoinJars
         throw new CoinJarException(CoinJarErrorCodes.InvalidCoinAmount, $"Adding coin failed. Expected amount must be greater than 0.");
       }
 
-      var filledVolume = GetFilledVolume();
-      if(filledVolume + coin.Volume > _volume)
+      var coinJar = _dataStore.GetCoinJar();
+
+      var filledVolume = coinJar.Coins.Sum(coin => coin.Volume);
+      if (filledVolume + coin.Volume > _volume)
       {
         throw new CoinJarException(CoinJarErrorCodes.VolumeExceeded, $"Adding coin failed. Coin jar would exceed max volume of {_volume} fluid ounces.");
       }
-      _coins.Add(coin);
+
+      coinJar.Coins.Add(new CoinData { Amount = coin.Amount, Volume = coin.Volume });
+      _dataStore.UpdateCoinJar(coinJar);
     }
 
     public decimal GetTotalAmount()
     {
-      return _coins.Sum(coin => coin.Amount);
+      return _dataStore.GetCoinJar().Coins.Sum(coin => coin.Amount);
     }
 
     public void Reset()
     {
-      _coins.Clear();
-    }
-
-    private decimal GetFilledVolume()
-    {
-      return _coins.Sum(coin => coin.Volume);
+      var coinJar = _dataStore.GetCoinJar();
+      coinJar.Coins.Clear();
+      _dataStore.UpdateCoinJar(coinJar);
     }
   }
 }
