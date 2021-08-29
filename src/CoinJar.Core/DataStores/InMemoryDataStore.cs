@@ -8,11 +8,6 @@ namespace CoinJar.Core.DataStores
   {
     private CoinJarData _coinJar;
 
-    public InMemoryDataStore()
-    {
-      _coinJar = new CoinJarData();
-    }
-
     public CoinJarData GetCoinJar()
     {
       if(_coinJar == null)
