@@ -16,7 +16,7 @@ CoinJar.Core - The shared business logic, models and persistence layer.
 CoinJarApi - The ASP.Net Core project containing the API controller.
 CoinJar.Tests - The unit tests for the project.
 
-![Example](example.png?raw=true "Example")
+![Example](startpage-example.png?raw=true "Example")
 
 ## Authors
 
