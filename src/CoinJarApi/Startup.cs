@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NLog;
+using NLog.Web;
 using System;
 using System.IO;
 using System.Reflection;
@@ -23,9 +25,12 @@ namespace CoinJarApi
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+
       services.AddControllers();
       services.AddScoped<ICoinJarManager, CoinJarManager>();
       services.AddSingleton<ICoinJar, InMemoryCoinJar>();
+      services.AddSingleton<ILogger>(logger);
 
       services.AddSwaggerGen(options =>
       {

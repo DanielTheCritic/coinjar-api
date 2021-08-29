@@ -1,0 +1,8 @@
+2021-08-29 13:15:33.5189 Info Message Template Auto Format enabled
+2021-08-29 13:15:33.5385 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-29 13:15:33.5744 Info Adding target FileTarget(Name=alldata)
+2021-08-29 13:15:33.5948 Info Validating config: TargetNames=alldata, ConfigItems=21, FilePath=C:\dev\DanielTheCritic\coinjar-api\src\CoinJarApi\bin\Debug\netcoreapp3.1\nlog.config
+2021-08-29 13:17:36.6719 Info Message Template Auto Format enabled
+2021-08-29 13:17:36.6883 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-29 13:17:36.7261 Info Adding target FileTarget(Name=alldata)
+2021-08-29 13:17:36.7470 Info Validating config: TargetNames=alldata, ConfigItems=21, FilePath=C:\dev\DanielTheCritic\coinjar-api\src\CoinJarApi\bin\Debug\netcoreapp3.1\nlog.config
