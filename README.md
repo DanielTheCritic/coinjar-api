@@ -20,11 +20,11 @@ An ASP.Net Core API used to manage a coin jar.
 
 ## Project Info
 
-# Data Storage
+### Data Storage
 Data is stored by default to a "data\coinjar.json" file in the execution directory.
 This can be swapped out with an in memory store implementation by swapping out *FileDataStore* with *InMemoryDataStore* in the Startup.cs.
 
-# Logging
+### Logging
 Very basic logging has been implemented using *nlog*. 
 Log files reside in "logs\" folder in the execution directionary.
 These configurations can be changed by editing the *nlog.config* file.
