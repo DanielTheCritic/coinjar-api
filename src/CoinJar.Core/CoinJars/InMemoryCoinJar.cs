@@ -20,11 +20,6 @@ namespace CoinJar.Core.CoinJars
 
     public void AddCoin(ICoin coin)
     {
-      if(coin == null)
-      {
-        throw new CoinJarException(CoinJarErrorCodes.NullRequestBody, $"Invalid request body.");
-      }
-
       if (coin.Volume <= 0)
       {
         throw new CoinJarException(CoinJarErrorCodes.InvalidCoinVolume, $"Adding coin failed. Expected volume must be greater than 0.");
