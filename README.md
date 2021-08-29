@@ -18,6 +18,17 @@ An ASP.Net Core API used to manage a coin jar.
 - CoinJarApi - The ASP.Net Core project containing the API controller.
 - CoinJar.Tests - The unit tests for the project.
 
+## Project Info
+
+# Data Storage
+Data is stored by default to a "data\coinjar.json" file in the execution directory.
+This can be swapped out with an in memory store implementation by swapping out *FileDataStore* with *InMemoryDataStore* in the Startup.cs.
+
+# Logging
+Very basic logging has been implemented using *nlog*. 
+Log files reside in "logs\" folder in the execution directionary.
+These configurations can be changed by editing the *nlog.config* file.
+
 ## Authors
 
 **Daniel Sansom** [DanielTheCritic](https://github.com/DanielTheCritic)
