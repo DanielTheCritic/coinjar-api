@@ -10,7 +10,7 @@ An ASP.Net Core API used to manage a coin jar.
 - The application with automatically launch to http://localhost:5001/swagger in your web browser.
 - View a collection of endpoints in the Swagger UI.
 - You can import the collection into applications like Postman or Insomnia using http://localhost:5001/swagger/v2/swagger.json
-- Alternatively, a collection has been included within the repository: ![API Collection](api_collection_insomnia.json?raw=true)
+- Alternatively, a collection has been included within the repository: [API Collection](api_collection_insomnia.json?raw=true)
 ![Example](startpage-example.png?raw=true "Example")
 
 ## Components
