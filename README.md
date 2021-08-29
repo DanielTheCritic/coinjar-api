@@ -14,10 +14,10 @@ An ASP.Net Core API used to manage a coin jar.
 ![Example](startpage-example.png?raw=true "Example")
 
 ## Components
-CoinJar.Core - The shared business logic, models and persistence layer.
-CoinJarApi - The ASP.Net Core project containing the API controller.
-CoinJar.Tests - The unit tests for the project.
+- CoinJar.Core - The shared business logic, models and persistence layer.
+- CoinJarApi - The ASP.Net Core project containing the API controller.
+- CoinJar.Tests - The unit tests for the project.
 
 ## Authors
 
-* **Daniel Sansom** [DanielTheCritic](https://github.com/DanielTheCritic)
+**Daniel Sansom** [DanielTheCritic](https://github.com/DanielTheCritic)
