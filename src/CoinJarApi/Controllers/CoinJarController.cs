@@ -1,20 +1,24 @@
 ﻿using CoinJar.Core.Coins;
 using CoinJarApi.Managers;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace CoinJarApi.Controllers
 {
+  /// <summary>
+  /// The CoinJar controller that handles all CRUD operations relating to a single instance of a coin jar.
+  /// </summary>
   [ApiController]
   [Route("[controller]")]
   public class CoinJarController : ControllerBase
   {
     private readonly ICoinJarManager _manager;
-    private readonly ILogger<CoinJarController> _logger;
 
-    public CoinJarController(ICoinJarManager coinJarManager, ILogger<CoinJarController> logger)
+    /// <summary>
+    /// A constructor that accepts an implementation of ICoinJarManager.
+    /// </summary>
+    /// <param name="coinJarManager">The ICoinJarManager.</param>
+    public CoinJarController(ICoinJarManager coinJarManager)
     {
-      _logger = logger;
       _manager = coinJarManager;
     }
 

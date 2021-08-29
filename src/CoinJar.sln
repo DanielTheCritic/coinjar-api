@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinJarApi", "CoinJar\CoinJarApi.csproj", "{430C6653-51C0-4F7A-982D-AA488D6172C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinJarApi", "CoinJarApi\CoinJarApi.csproj", "{430C6653-51C0-4F7A-982D-AA488D6172C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinJarApi.Tests", "CoinJarApi.Tests\CoinJarApi.Tests.csproj", "{4AF26BF0-7122-4543-9E9E-3D9CA104ABAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinJar.Tests", "CoinJar.Tests\CoinJar.Tests.csproj", "{4AF26BF0-7122-4543-9E9E-3D9CA104ABAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinJar.Core", "CoinJar.Core\CoinJar.Core.csproj", "{838C7B99-3832-4876-82E7-B96C1F7AE9C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinJar.Core", "CoinJar.Core\CoinJar.Core.csproj", "{838C7B99-3832-4876-82E7-B96C1F7AE9C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CoinJarApi.Tests
+namespace CoinJar.Tests
 {
   public class MockCoin : ICoin
   {

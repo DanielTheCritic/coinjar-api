@@ -4,7 +4,7 @@ using CoinJar.Core.Exceptions;
 using NUnit.Framework;
 using System;
 
-namespace CoinJarApi.Tests
+namespace CoinJar.Tests
 {
   [TestFixture]
   public class InMemoryCoinJarTests
