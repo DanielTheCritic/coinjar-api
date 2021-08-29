@@ -36,7 +36,7 @@ namespace CoinJarApi
         options.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
         {
           Title = "CoinJar API",
-          Version = "v2",
+          Version = "v1",
           Description = "Services for managing a coin jar.",
         });
       });
